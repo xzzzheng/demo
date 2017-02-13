@@ -4,10 +4,11 @@
 <meta charset="utf-8" />  
 <title>无标题文档</title>  
 <script>  
-var a={"code":1,"list":[{"category1_id":"1","category1_name":"\u9152\u6c34\u996e\u6599","category1_intro":"\u6e05\u51c9\u53ef\u53e3\u7684\u9152\u6c34\u996e\u6599","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389343628.jpg"},{"category1_id":"2","category1_name":"\u7c73\u9762\u7cae\u6cb9","category1_intro":"\u5bb6\u5ead\u5fc5\u5907","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389343865.jpg"},{"category1_id":"3","category1_name":"\u7f8e\u5bb9\u6d17\u62a4","category1_intro":"\u62a4\u80a4\u5fc5\u5907","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389343935.jpg"},{"category1_id":"4","category1_name":"\u6e05\u6d01\u6d17\u6da4","category1_intro":"\u7ed9\u60a8\u4e00\u4e2a\u5e72\u51c0\u7684\u751f\u6d3b\u73af\u5883","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389343986.jpg"},{"category1_id":"5","category1_name":"\u751f\u6d3b\u7528\u54c1","category1_intro":"\u5bb6\u5ead\u5fc5\u5907","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389344445.jpg"},{"category1_id":"6","category1_name":"\u4f11\u95f2\u98df\u54c1","category1_intro":"\u597d\u5403\u7f8e\u5473","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389344494.jpg"}]};  
+var a={"code":1,"list":[{"category1_id":"1","category1_name":"\u9152\u6c34\u996e\u6599","category1_intro":"\u6e05\u51c9\u53ef\u53e3\u7684\u9152\u6c34\u996e\u6599","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389343628.jpg"},{"category1_id":"2","category1_name":"\u7c73\u9762\u7cae\u6cb9","category1_intro":"\u5bb6\u5ead\u5fc5\u5907","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389343865.jpg"},{"category1_id":"3","category1_name":"\u7f8e\u5bb9\u6d17\u62a4","category1_intro":"\u62a4\u80a4\u5fc5\u5907","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389343935.jpg"},{"category1_id":"4","category1_name":"\u6e05\u6d01\u6d17\u6da4","category1_intro":"\u7ed9\u60a8\u4e00\u4e2a\u5e72\u51c0\u7684\u751f\u6d3b\u73af\u5883","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389343986.jpg"},{"category1_id":"5","category1_name":"\u751f\u6d3b\u7528\u54c1","category1_intro":"\u5bb6\u5ead\u5fc5\u5907","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389344445.jpg"},{"category1_id":"6","category1_name":"\u4f11\u95f2\u98df\u54c1","category1_intro":"\u597d\u5403\u7f8e\u5473","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389344494.jpg"},{"category1_id":"7","category1_name":"\u4f11\u95f2\u98df\u54c1","category1_intro":"\u597d\u5403\u7f8e\u5473","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389344494.jpg"},{"category1_id":"8","category1_name":"\u4f11\u95f2\u98df\u54c1","category1_intro":"\u597d\u5403\u7f8e\u5473","category1_images":"http:\/\/www.songcuomen.com\/attachments\/productType\/2014-01\/10\/21_1389344494.jpg"}]};  
 var y=1;//表示页数  
 var t=2;//表示每页现实几条数据  
 var z=a["list"].length;  
+console.log(z)
 var zy= Math.ceil(z/t);  
 window.onload=function (){  
 fanye(0);  
@@ -26,10 +27,10 @@ function fanye(f)
         }      
   
      var otbod=document.getElementById('table').tBodies[0];  
+     console.log(otbod.rows)
      var s=otbod.rows.length;  
     for(i=0;i<s;i++)  
     {  
-  
         otbod.removeChild(otbod.rows[0]);  
     }  
         y+=f;  
